@@ -1,1 +1,29 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Parameters</title>
+</head>
+<body>
+    <h1>URL Parameters</h1>
+    <p id="output"></p>
+
+    <script>
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        };
+
+        // Get the value of the 'input' parameter from the URL
+        var inputValue = getUrlParameter('input');
+
+        // Display the input value on the webpage
+        document.getElementById('output').textContent = "Input value: " + inputValue;
+    </script>
+</body>
+</html>
+

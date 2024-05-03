@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="letter-container">
+        <h1>Love Letter</h1>
+        <div class="post" id="postOutput"></div>
+    </div>
+
+    <script>
+        var urlParams = new URLSearchParams(window.location.search);
+        var inputText = urlParams.get('haslo');
+        var message = '';
+
+        // Check specific input and set corresponding message
+        if (inputText === "idkwtwt") {
+            message = "Welcome on this very hidden website!";
+        } else {
+            message = "Kocham cię myszko <3";
+        }
+
+        // Display the message
+        document.getElementById("postOutput").textContent = message;
+    </script>
+</body>
+</html>

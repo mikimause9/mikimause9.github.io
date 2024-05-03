@@ -3,27 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Parameters</title>
+    <title>Enter Password</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>URL Parameters</h1>
-    <p id="output"></p>
+    <h1>Welcome</h1>
+    <form id="passwordForm">
+        <input type="text" id="passwordInput" placeholder="haslo 🤫">
+        <button type="submit"><3</button>
+    </form>
 
-    <script>
-        // Function to get URL parameters
-        function getUrlParameter(name) {
-            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-            var results = regex.exec(location.search);
-            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-        };
-
-        // Get the value of the 'input' parameter from the URL
-        var inputValue = getUrlParameter('input');
-
-        // Display the input value on the webpage
-        document.getElementById('output').textContent = "Input value: " + inputValue;
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
-

@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ffe6e6;
+    background-color: #ffdddd;
     margin: 0;
     padding: 0;
 }
@@ -57,7 +57,7 @@ button:hover {
 #heartButton {
     width: 50px;
     height: 50px;
-    background-color: #cc6666;
+    background-color: hwb(0 40% 20%);
     color: #fff;
     border: none;
     border-radius: 50%;

@@ -1,4 +1,4 @@
-document.getElementById("passwordForm").addEventListener("submit", function(event) {
+document.getElementById("passwordForm").addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent form submission
     var password = document.getElementById("passwordInput").value;
     if (password === "idkwtwt") {

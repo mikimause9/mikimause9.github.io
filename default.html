@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liscik</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="letter-container">
+        <h1 id="tittele"> <3 <3 <3 <3</h1>
+                <div class="post" id="postOutput"></div>
+    </div>
+
+    <script>
+        var urlParams = new URLSearchParams(window.location.search);
+        var inputText = urlParams.get('haslo');
+        var inputText1 = urlParams.get('title');
+        var message = '';
+        var messagetitle = '<3<3<3';
+
+        // Check specific input and set corresponding message
+        if (inputText === "test") {
+            messagetitle = "Testowa strona";
+            message = "Ta strona powstała w celach testowych, nie ma na celu osiągnąć &#379;adnego efektu, po prostu ma być :)";
+        } else {
+            message = "Kocham cię myszko <3";
+        }
+        if (inputText1 != null) {
+            messagetitle = inputText1;
+        }
+
+        // Display the message
+        document.getElementById("postOutput").innerHTML = message;
+        document.getElementById("tittele").textContent = messagetitle;
+
+
+        //    listElement = document.createElement("div"),
+        //    container = document.querySelector("#postOutput"); //I have a <ul id="resultlist">
+        //listElement.innerHTML = message;
+        //container.appendChild(listElement);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eksperyment</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #grow {
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><3</h1>
+    <button type="submit" id="yes" onclick="">Tak</button>
+    <button type="submit" id="no" onclick="myFunction()">Nie</button>
+
+    <script>
+        function myFunction() {
+            var button = document.getElementById("yes");
+            var currentPaddingTop = parseInt(window.getComputedStyle(button).paddingTop);
+            var currentPaddingRight = parseInt(window.getComputedStyle(button).paddingRight);
+            var currentPaddingBottom = parseInt(window.getComputedStyle(button).paddingBottom);
+            var currentPaddingLeft = parseInt(window.getComputedStyle(button).paddingLeft);
+
+            button.style.paddingTop = (currentPaddingTop + 5) + "px";
+            button.style.paddingRight = (currentPaddingRight + 10) + "px";
+            button.style.paddingBottom = (currentPaddingBottom + 5) + "px";
+            button.style.paddingLeft = (currentPaddingLeft + 10) + "px";
+        }
+    </script>
+</body>
+
+</html>

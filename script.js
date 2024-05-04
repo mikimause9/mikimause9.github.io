@@ -4,6 +4,9 @@ var infoParam = urlParams.get('info');
 if (infoParam === "urodzinki19") {
     window.location.href = "zaproszenie_urodzinki_19.html";
 }
+else if (infoParam === "pokaz") {
+    window.location.href = "pokazowastrona.html";
+}
 
 document.getElementById("passwordForm").addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent form submission

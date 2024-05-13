@@ -16,7 +16,7 @@
 <body>
     <h1><3</h1>
     <button type="submit" id="yes" onclick="">Tak</button>
-    <button type="submit" id="no" onclick="myFunction()">Nie</button>
+    <button type="submit" id="no" onmouseover="myFunction()">Nie</button>
 
     <script>
         function myFunction() {
@@ -26,10 +26,10 @@
             var currentPaddingBottom = parseInt(window.getComputedStyle(button).paddingBottom);
             var currentPaddingLeft = parseInt(window.getComputedStyle(button).paddingLeft);
 
-            button.style.paddingTop = (currentPaddingTop + 5) + "px";
-            button.style.paddingRight = (currentPaddingRight + 10) + "px";
-            button.style.paddingBottom = (currentPaddingBottom + 5) + "px";
-            button.style.paddingLeft = (currentPaddingLeft + 10) + "px";
+            button.style.paddingTop = (currentPaddingTop + 10) + "px";
+            button.style.paddingRight = (currentPaddingRight + 20) + "px";
+            button.style.paddingBottom = (currentPaddingBottom + 10) + "px";
+            button.style.paddingLeft = (currentPaddingLeft + 20) + "px";
         }
     </script>
 </body>

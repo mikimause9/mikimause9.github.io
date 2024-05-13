@@ -80,10 +80,10 @@ button:hover {
     display: inline-block;
     font-size: 16px;
     display: inline-block;
-  }
+}
 
-  #no {
-    background-color: #c30000; 
+#no {
+    background-color: #c30000;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -92,4 +92,10 @@ button:hover {
     display: inline-block;
     font-size: 16px;
     display: inline-block;
-  }
+}
+
+#runbutton {
+    position: absolute;
+    left: 50%;
+    background-color: rgb(29, 158, 29);
+}

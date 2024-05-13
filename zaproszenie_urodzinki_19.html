@@ -11,17 +11,34 @@
 <body>
     <div class="letter-container">
         <h1 id="tittele">💖ZAPROSZENIE💖</h1>
-                <div class="post" id="postOutput">Zapraszam cię myszko dnia 15.06.2024r. do Wrocławia na randkę 💖<br> 
-                    Oczywiście jeśli nie mo&#380;esz, to nie ma problemu. Rozumiem &#380;e ten termin mo&#380;esz mieć ju&#380; zajęty. Jeśli tak jest to musisz wybrać inną datę 😏😚<br>
-                    Plan: <br>- pewna galeria<br>- pewne kino<br>- pewne niespodzianki 😏<br>
-                    Jeśli chodzi o takie wa&#380;niejsze szczegóły to:<br>
-                    planowany wyjazd pociągiem o 5:16 albo 7:41 (transport w gratisie 😏)<br>
-                    Planowany powrót wg uznania 😏<br>
-                    wymagane są: <br>- chęć prze&#380;ycia fajnego dnia<br>- chęć na sporo chodzenia<br>- NAJWAŻNIEJSZE: chęć bycia z pewnym starszym panem 😏<br>
-                    (Ps. jest du&#380;a szansa, &#380;e ten pan zapomni, więc przypomnij mu aby cię o coś poprosił 😘)
-                </div>
+        <div class="post" id="postOutput"><p>Zapraszam cię myszko dnia 15.06.2024r. do Wrocławia na randkę 💖<br>
+            Oczywiście jeśli nie mo&#380;esz, to nie ma problemu. Rozumiem &#380;e ten termin mo&#380;esz mieć ju&#380;
+            zajęty. Jeśli tak jest to musisz wybrać inną datę 😏😚<br>
+            Plan: <br>- pewna galeria<br>- pewne kino<br>- Pewne atrakcje<br>- pewne niespodzianki 😏<br>
+            Jeśli chodzi o takie wa&#380;niejsze szczegóły to:<br>
+            planowany wyjazd pociągiem o 7:41 (transport w gratisie 😏)<br>
+            Planowany powrót według uznania 😏<br>
+            wymagane są: <br>- chęć prze&#380;ycia fajnego dnia<br>- chęć na sporo chodzenia<br>- NAJWAŻNIEJSZE: chęć
+            bycia z pewnym starszym panem 😏<br></p>
+            <!--                    (Ps. jest du&#380;a szansa, &#380;e ten pan zapomni, więc przypomnij mu aby cię o coś poprosił 😘)-->
+            <!-- <button id="runbutton" onmouseover="runaway(this)">Zgadzam<br>się</button> -->
+<!--Here should be a button-->
+<button id="runbutton" onmouseover="runaway(this)">Run Away</button>
+
+        </div>
     </div>
 
+    <script>
+        function runaway(id) {
+            id.style.top = Math.round(Math.random() * window.screen.height / 1.2) + 'px';
+            id.style.left = Math.round(Math.random() * window.screen.width / 1.2) + 'px';
+            id.style.width = Math.round(Math.random() * 200) +100+ 'px';;
+            id.style.height = Math.round(Math.random() * 200) +100+ 'px';;
+            //    id.style.top =  window.screen.height/ 1.5 + 'px';
+            //    id.style.left = window.screen.width/ 1.5 + 'px';
+
+        }
+    </script>
 </body>
 
 </html>

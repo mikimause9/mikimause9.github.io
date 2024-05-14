@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liscik</title>
     <link rel="stylesheet" href="styles.css">
 
@@ -13,26 +13,28 @@
     <div class="letter-container">
         <h1 id="tittele">💖ZAPROSZENIE💖</h1>
         <div class="post" id="postOutput">
-            Zapraszam cię myszko dnia 15.06.2024r. do Wrocławia na randkę 💖<br>
-                Oczywiście jeśli nie mo&#380;esz, to nie ma problemu. Rozumiem &#380;e ten termin mo&#380;esz mieć
-                ju&#380;
-                zajęty. Jeśli tak jest to musisz wybrać inną datę 😏😚<br>
-                Plan: <br>- pewna galeria<br>- pewne kino<br>- Pewne atrakcje<br>- pewne niespodzianki 😏<br>
-                Jeśli chodzi o takie wa&#380;niejsze szczegóły to:<br>
-                planowany wyjazd pociągiem o 7:41 (transport w gratisie 😏)<br>
-                Planowany powrót według uznania 😏<br>
-                wymagane są: <br>- chęć prze&#380;ycia fajnego dnia<br>- chęć na sporo chodzenia<br>- NAJWAŻNIEJSZE:
-                chęć
-                bycia z pewnym starszym panem 😏<br>
+            Zapraszam cię myszko 15 czerwca 2024r. do Wrocławia na randkę 💖<br>
+            Oczywiście jeśli nie mo&#380;esz, to nie ma problemu. Rozumiem &#380;e ten termin mo&#380;esz mieć
+            ju&#380;
+            zajęty. Jeśli tak jest to musisz wybrać inną datę 😏😚<br>
+            Plan: <br>- pewna galeria<br>- pewne kino<br>- Pewne atrakcje<br>- pewne niespodzianki 😏<br>
+            Jeśli chodzi o takie wa&#380;niejsze szczegóły to:<br>
+            planowany wyjazd pociągiem o 7:41 (transport w gratisie 😏)<br>
+            Planowany powrót według uznania 😏<br>
+            wymagane są: <br>- chęć prze&#380;ycia fajnego dnia<br>- chęć na sporo chodzenia<br>- NAJWAŻNIEJSZE:
+            chęć
+            bycia z pewnym starszym panem 😏<br>
             <!--                    (Ps. jest du&#380;a szansa, &#380;e ten pan zapomni, więc przypomnij mu aby cię o coś poprosił 😘)-->
             <!-- <button id="runbutton" onmouseover="runaway(this)">Zgadzam<br>się</button> -->
             <!--Here should be a button-->
             <!--<button id="runbutton" onmouseover="runaway(this)">Run Away</button>-->
-            <div id="heartContainer">
-            </div>
         </div>
     </div>
+    <div id="heartContainer">
 
+    </div>
+
+    
     <script>
         function runaway(id) {
             id.style.top = Math.round(Math.random() * window.screen.height / 1.2) + 'px';
@@ -47,19 +49,21 @@
         function createHeart() {
             const heart = document.createElement('div');
             heart.classList.add('heart');
-            var distance = Math.random() * (window.innerWidth - 20) + 10 + "px";
+            var distance = Math.random() * (window.innerWidth - 50) + 25 + "px";
             heart.style.left = distance; // Random position horizontally
-            heart.style.top = `${window.scrollY + window.innerHeight}px`; // Start from bottom
             heart.innerHTML = "&#9829";
             var size = Math.random() * 60 + 20 + "px";
-            heart.style.fontSize = size;
+            heart.style.fontSize = size; //#ff5470, #e3256b, #c21e56, #de3163, #e40078, #cf71af, #ff9999, #d10056, #e30b5d
+            var colours =  ["#ff5470", "#e3256b", "#c21e56", "#de3163", "#e40078", "#cf71af", "#ff9999", "#d10056", "#e30b5d"];
+            var randcolor = Math.floor(Math.random() * colours.length);
+            heart.style.color = colours[randcolor];
             document.getElementById('heartContainer').appendChild(heart);
-            console.log(window.scrollY + window.innerHeight);
+            //console.log();
             animateHeart(heart);
         }
 
         function animateHeart(heart) {
-            let pos = window.innerHeight; // Start from bottom
+            let pos = window.scrollY + window.innerHeight; // Start from bottom
             const animationInterval = setInterval(frame, 10);
 
             function frame() {
@@ -74,7 +78,7 @@
         }
 
         // Create hearts periodically
-        setInterval(createHeart, 1000);
+        setInterval(createHeart, 500);
     </script>
 </body>
 

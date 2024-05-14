@@ -54,7 +54,7 @@
             var size = Math.random() * 60 + 20 + "px";
             heart.style.fontSize = size;
             document.getElementById('heartContainer').appendChild(heart);
-            console.log(window.innerWidth);
+            console.log(window.scrollY + window.innerHeight);
             animateHeart(heart);
         }
 

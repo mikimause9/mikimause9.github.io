@@ -28,7 +28,8 @@
             <!-- <button id="runbutton" onmouseover="runaway(this)">Zgadzam<br>się</button> -->
             <!--Here should be a button-->
             <!--<button id="runbutton" onmouseover="runaway(this)">Run Away</button>-->
-
+            <div id="heartContainer">
+            </div>
         </div>
     </div>
 
@@ -42,6 +43,38 @@
             //    id.style.left = window.screen.width/ 1.5 + 'px';
 
         }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            var distance = Math.random() * (window.innerWidth - 20) + 10 + "px";
+            heart.style.left = distance; // Random position horizontally
+            heart.style.top = `${window.innerHeight}px`; // Start from bottom
+            heart.innerHTML = "&#9829";
+            var size = Math.random() * 60 + 20 + "px";
+            heart.style.fontSize = size;
+            document.getElementById('heartContainer').appendChild(heart);
+            //console.log(GeolocationCoordinates);
+            animateHeart(heart);
+        }
+
+        function animateHeart(heart) {
+            let pos = window.innerHeight; // Start from bottom
+            const animationInterval = setInterval(frame, 10);
+
+            function frame() {
+                if (pos <= -30) {
+                    clearInterval(animationInterval);
+                    heart.remove();
+                } else {
+                    pos -= 1; // Move heart upwards
+                    heart.style.top = pos + 'px';
+                }
+            }
+        }
+
+        // Create hearts periodically
+        setInterval(createHeart, 1000);
     </script>
 </body>
 

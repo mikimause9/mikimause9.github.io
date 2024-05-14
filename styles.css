@@ -99,3 +99,12 @@ button:hover {
     left: 50%;
     background-color: rgb(29, 158, 29);
 }
+
+.heart {
+    position: relative;
+    background-color: transparent;
+    font-size: 50px;
+    color: red;
+    position: absolute;
+    opacity: 40%;
+}

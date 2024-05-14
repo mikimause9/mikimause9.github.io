@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Balloons</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row; /* Display hearts next to each other */
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        #text {
+            font-size: 36px;
+            margin-right: 20px;
+        }
+
+        .heart-container {
+            position: relative;
+        }
+
+        .heart {
+            background-color: #ff8080;
+            width: 30px; /* Make hearts circles */
+            height: 30px; /* Make hearts circles */
+            border-radius: 50%; /* Make hearts circles */
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart-container" id="heartContainer">
+        </div>
+    </div>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            var distance = Math.random() * (2* window.innerWidth ) - window.innerWidth + "px";
+            heart.style.left = distance; // Random position horizontally
+            heart.style.top = `${window.innerHeight}px`; // Start from bottom
+            heart.textContent = distance;
+            document.getElementById('heartContainer').appendChild(heart);
+            console.log(`${Math.random() * (window.innerWidth - 30)}px`);
+            animateHeart(heart);
+        }
+
+        function animateHeart(heart) {
+            let pos = window.innerHeight; // Start from bottom
+            const animationInterval = setInterval(frame, 20);
+
+            function frame() {
+                if (pos <= -30) {
+                    clearInterval(animationInterval);
+                    heart.remove();
+                } else {
+                    pos--; // Move heart upwards
+                    heart.style.top = pos + 'px';
+                }
+            }
+        }
+
+        // Create hearts periodically
+        setInterval(createHeart, 1000);
+    </script>
+</body>
+</html>

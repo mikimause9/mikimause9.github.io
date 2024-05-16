@@ -13,17 +13,17 @@
     <div class="letter-container">
         <h1 id="tittele">💖ZAPROSZENIE💖</h1>
         <div class="post" id="postOutput">
-            Zapraszam cię myszko 15 czerwca 2024r. do Wrocławia na randkę 💖<br>
+            Zapraszam cię skarbie 15 czerwca 2024r. do Wrocławia na randkę 💖<br>
             Oczywiście jeśli nie mo&#380;esz, to nie ma problemu. Rozumiem &#380;e ten termin mo&#380;esz mieć
             ju&#380;
             zajęty. Jeśli tak jest to musisz wybrać inną datę 😏😚<br>
-            Plan: <br>- pewna galeria<br>- pewne kino<br>- Pewne atrakcje<br>- pewne niespodzianki 😏<br>
+            Plan: <br>&hearts; pewna galeria<br>&hearts; pewne kino<br>&hearts; Pewne atrakcje<br>&hearts; pewne
+            niespodzianki<br>
             Jeśli chodzi o takie wa&#380;niejsze szczegóły to:<br>
-            planowany wyjazd pociągiem o 7:41 (transport w gratisie 😏)<br>
+            planowany wyjazd pociągiem o 7:41 (transport zapewniony 😘)<br>
             Planowany powrót według uznania 😏<br>
-            wymagane są: <br>- chęć prze&#380;ycia fajnego dnia<br>- chęć na sporo chodzenia<br>- NAJWAŻNIEJSZE:
-            chęć
-            bycia z pewnym starszym panem 😏<br>
+            wymagane są: <br>&#9825; chęć prze&#380;ycia fajnego dnia<br>&#9825; chęć na sporo chodzenia<br>&#9825;
+            <b>NAJWAŻNIEJSZE</b>: chęć bycia z pewnym starszym panem 😏<br>
             <!--                    (Ps. jest du&#380;a szansa, &#380;e ten pan zapomni, więc przypomnij mu aby cię o coś poprosił 😘)-->
             <!-- <button id="runbutton" onmouseover="runaway(this)">Zgadzam<br>się</button> -->
             <!--Here should be a button-->
@@ -34,7 +34,7 @@
 
     </div>
 
-    
+
     <script>
         function runaway(id) {
             id.style.top = Math.round(Math.random() * window.screen.height / 1.2) + 'px';
@@ -54,9 +54,11 @@
             heart.innerHTML = "&#9829";
             var size = Math.random() * 60 + 20 + "px";
             heart.style.fontSize = size; //#ff5470, #e3256b, #c21e56, #de3163, #e40078, #cf71af, #ff9999, #d10056, #e30b5d
-            var colours =  ["#ff5470", "#e3256b", "#c21e56", "#de3163", "#e40078", "#cf71af", "#ff9999", "#d10056", "#e30b5d"];
+            var colours = ["#ff5470", "#e3256b", "#c21e56", "#de3163", "#e40078", "#cf71af", "#ff9999", "#d10056", "#e30b5d"];
             var randcolor = Math.floor(Math.random() * colours.length);
             heart.style.color = colours[randcolor];
+            var opac = Math.floor(Math.random() * 40 + 40) + "%";
+            heart.style.opacity = opac;
             document.getElementById('heartContainer').appendChild(heart);
             //console.log();
             animateHeart(heart);

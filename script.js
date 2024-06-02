@@ -7,6 +7,9 @@ if (infoParam === "urodzinki19") {
 else if (infoParam === "pokaz") {
     window.location.href = "pokazowastrona.html";
 }
+else if (infoParam === "wieczgier24") {
+    window.location.href = "ZaproszonkoWieczorGier.html";
+}
 
 document.getElementById("passwordForm").addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent form submission

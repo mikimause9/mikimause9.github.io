@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaproszenie na wieczór gier</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #cffffd;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #ff4500;
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .images {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .images img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .buttons {
+            margin-top: 30px;
+        }
+        .buttons button {
+            background-color: #ff4500;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .buttons button:hover {
+            background-color: #ff6347;
+        }
+    </style>
+    <script>
+        function handleButtonClick(message) {
+            alert(message);
+        }
+        function handleImageClick(imageNumber) {
+            alert(imageNumber);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Zaproszenie</h1>
+        <p>Zapraszam cię skarbie na wieczór gier w piątek 😚</p>
+        <div class="images">
+            <img src="https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/uno-flip-gra-karciana-gdr44-uno-b-iext150479505.jpg" alt="Gra planszowa 1" onclick="handleButtonClick('Mo&#x017C;e pogramy w uno 😏')">
+            <img src="https://ecsmedia.pl/cdn-cgi/image/format=webp,width=544,height=544,/c/wirus-gra-karciana-muduko-b-iext150713617.jpg" alt="Gra planszowa 2" onclick="handleButtonClick('A mo&#x017C;e w wirusa 😚')">
+            <img src="https://static.posters.cz/image/1300/dobble-disney-princess-i192661.jpg" alt="Gra planszowa 3" onclick="handleButtonClick('Tej gry niestety nie mam, ale mamy pare innych 😏')">
+        </div>
+        <div class="buttons">
+            <button onclick="handleButtonClick('To ustalone 😘')">Mogę iść</button>
+            <button onclick="handleButtonClick('Nie interesuje mnie to, zbyt dużo czasu spędziłem na robieniu tego zaproszenia żebyś odmówiła 🤣')">Nie chce mi się</button>
+        </div>
+    </div>
+</body>
+</html>

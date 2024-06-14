@@ -11,7 +11,7 @@
             position: absolute;
             top: -5%;
             font-size: 2em;
-            animation: fall linear infinite, spin linear infinite;
+            animation: fall linear, spin linear;
         }
 
         @keyframes fall {
@@ -64,15 +64,16 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const emojis = ["🥹", "🩵", "🐝", "🎂", "🎉", "🎊", "💙", "💜", "💖", "💗", "💓", "💞", "💕", "💘", "💝", "😘", "😚", "🫶", "🥰", "😍", "🤍", "❤️‍🔥"];
-            const emojiCount = 5; // Reduced to a third
+            const emojiCount = 15;
+            const intervalDuration = 500; // Interval for creating new emojis
 
             function createEmoji() {
                 const emoji = document.createElement("div");
                 emoji.className = "emoji";
                 emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
                 emoji.style.left = Math.random() * 100 - 10 + "vw";
-                emoji.style.animationDuration = Math.random() * 3 + 3 + "s";
-                emoji.style.animationDelay = "0s"; // No initial delay
+                const animationDuration = Math.random() * 3 + 3 + "s";
+                emoji.style.animationDuration = animationDuration;
                 emoji.style.fontSize = Math.random() * 2 + 1 + "em";
                 emoji.style.transform = "rotate(" + Math.random() * 360 + "deg)";
 
@@ -84,20 +85,21 @@
 
                 document.body.appendChild(emoji);
 
-                emoji.addEventListener("animationend", () => {
+                setTimeout(() => {
                     emoji.remove();
-                });
+                }, parseFloat(animationDuration) * 1000); // Convert to milliseconds
             }
 
             function startEmojiRain() {
+                // Initial burst of emojis
                 for (let i = 0; i < emojiCount; i++) {
-                    setTimeout(createEmoji, Math.random() * 3000); // Stagger emoji creation
+                    setTimeout(createEmoji, Math.random() * intervalDuration);
                 }
 
                 // Continuously create new emojis
                 setInterval(() => {
                     createEmoji();
-                }, 1000);
+                }, intervalDuration);
             }
 
             document.getElementById("startButton").addEventListener("click", () => {
@@ -105,13 +107,10 @@
                 document.getElementById("startButton").style.display = "none"; // Hide button after clicking
             });
         });
-
     </script>
 
-
     <div class="navigation">
-        <button class="button" id="startButton" onclick="alert('Napewno nie 🥹')">Koniec...?
-        </button>
+        <button class="button" id="startButton" onclick="alert('Napewno nie 🥹')">Koniec...?</button>
     </div>
 
 </body>

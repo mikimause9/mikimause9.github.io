@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ufffffff</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+    <h1>U kuzyna</h1>
+    Teraz spróbujmy ponownie odchaczyć<br>
+    Wszystko co powinnać mieć ju&#380; ze sobą<br>
+
+
+    <!--tutaj musi się pojawić info ze idziemy do ogrodu japonskiego, nwm czy zrobie coś z tą listą xdd-->
+
+    <div id="checklist">
+        <input value="1" name="r" type="checkbox" id="01" checked>
+        <label for="01">Dobry chumor</label>
+        <input value="2" name="r" type="checkbox" id="02" checked>
+        <label for="02">Uśmiech na twarzy</label>
+        <input value="3" name="r" type="checkbox" id="03" checked>
+        <label for="03">Sportowe ciuchy</label>
+        <input value="4" name="r" type="checkbox" id="04" checked>
+        <label for="04">swojego chłopaka</label>
+        <input value="5" name="r" type="checkbox" id="05">
+        <label for="05" id="tricky">Prezent</label>
+
+
+    </div>
+    <script>
+        let messageIndex = 0;
+        document.getElementById("tricky").addEventListener("click", function () {
+            document.getElementById("b").style.display = null;
+        });
+    </script>
+    <div class="navigation" id="b" style="display: none;">
+            <button class="button" onclick="location.href='page5.html'">Dalej</button>
+    </div>
+
+
+
+
+</body>
+
+</html>

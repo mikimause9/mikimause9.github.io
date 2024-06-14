@@ -10,6 +10,9 @@ else if (infoParam === "pokaz") {
 else if (infoParam === "wieczgier24") {
     window.location.href = "ZaproszonkoWieczorGier.html";
 }
+else if (infoParam === "wroclawuro") {
+    window.location.href = "Urodzinki19wroclaw.html";
+}
 
 document.getElementById("passwordForm").addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent form submission

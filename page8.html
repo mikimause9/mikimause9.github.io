@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Głodna?</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <style>
+        .food-choice {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, auto);
+            gap: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.318);
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        label.option {
+            padding: 10px 20px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.2em;
+        }
+
+        label.option:hover {
+            background-color: #402c3d;
+        }
+
+        input[type="radio"]:checked + label.option {
+            border-color: #ff69b4;
+            color: white;
+        }
+    </style>
+    <h1>Na co mam ochotę...</h1>
+
+    <!--A tutaj juz na zakończenie będzie coś o tej świeczce-->
+    <div class="food-choice">
+        <input type="radio" id="pizza" name="food" value="pizza">
+        <label for="pizza" class="option">🍕 Pizza<br>Hut</label>
+
+        <input type="radio" id="burger" name="food" value="burger">
+        <label for="burger" class="option">🍔 Burger<br>King</label>
+
+        <input type="radio" id="Pasibus" name="food" value="Pasibus">
+        <label for="Pasibus" class="option">🍔 Pasibus</label>
+
+        <input type="radio" id="Oriental" name="food" value="Oriental">
+        <label for="Oriental" class="option">🥗 Express<br>Oriental</label>
+
+        <input type="radio" id="mcdonald" name="food" value="mcdonald">
+        <label for="mcdonald" class="option">🍟 McDonald</label>
+
+        <input type="radio" id="not-deciding" name="food" value="not-deciding">
+        <label for="not-deciding" class="option">😤 Nie ja decyduje</label>
+    </div>
+
+    <div class="navigation">
+        <button class="button" id="b" onclick="redirectToNextPage()">Idziemy jeść</button>
+    </div>
+
+    <script>
+        function redirectToNextPage() {
+            const selectedOption = document.querySelector('input[name="food"]:checked');
+            if (selectedOption) {
+                const foodChoice = selectedOption.value;
+                const nextPageUrl = `page9.html?food=${foodChoice}`;
+                location.href = nextPageUrl;
+            } else {
+                alert("Ale wiesz, ze coś musisz wybrać? 😏");
+            }
+        }
+    </script>
+</body>
+</html>

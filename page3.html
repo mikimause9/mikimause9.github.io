@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojechaliśmy</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+    <h1>Na stacji</h1>
+    Tutaj zaczyna się cała zabawa<br>
+    Calutki dzionek, przygoda ciekawa<br>
+    Lecz zanim zaczniemy to na początek<br>
+    Musim odwiedzić kuzyna majątek<br>
+    Nie bądź zła na mnie, to tylko momencik<br>
+    Potem pójdziemy świętować i wiercić (brak rymów 😅)
+    <!--tutaj wprowadzenie do całej zabawy, coś musi jeszcze być z tym kodem ale to potem-->
+    <script>
+        function checkPassword(message, url) {
+            document.getElementById("password").style.display = null;
+            const input = document.getElementById("password").value.toLowerCase().trimEnd();
+            const correctPassword = "origami"; // Replace with the actual password
+            if (input === correctPassword) {
+                location.href = url;
+            } else {
+                alert(message);
+            }
+        }
+    </script>
+
+    <div class="navigation">
+        <input type="text" id="password"
+            style="display: none; border-radius: 10px; border: 2px solid pink; padding: 8px; background-color: #2c2c2c; color: white;"
+            placeholder="Drugie hasło <3">
+        <button class="button"
+            onclick="checkPassword('Żeby przejść dalej potrzebujesz kolejnego\nhasła które poznasz w swoim czasie 😏','page4.html')">Dalej</button>
+    </div>
+
+</body>
+
+</html>

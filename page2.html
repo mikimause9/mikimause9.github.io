@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upssss</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+    <h1>W pociągu</h1>
+    Teraz gdy zabawa się rozpoczyna<br>
+    Sprawdzę czy wszystko w całość się połączy<br>
+    Zaznacz z tej listy co &#380;eś ju&#380; zdobyła<br>
+    A ile cię jeszcze ze szczęściem nie łączy<br>
+
+    <!--tutaj musi się pojawić info ze idziemy do ogrodu japonskiego, nwm czy zrobie coś z tą listą xdd-->
+
+    <div id="checklist">
+        <input value="1" name="r" type="checkbox" id="01">
+        <label for="01">Dobry Chumor</label>
+        <input value="2" name="r" type="checkbox" id="02">
+        <label for="02">Uśmiech Na Twarzy</label>
+        <input value="3" name="r" type="checkbox" id="03">
+        <label for="03">Sportowe ciuchy</label>
+        <input value="4" name="r" type="checkbox" id="04">
+        <label for="04">Swojego Chłopaka</label>
+        <input value="5" name="r" type="checkbox" id="05" disabled>
+        <label for="05" id="tricky">Prezent</label>
+
+
+    </div>
+    <script>
+        let messageIndex = 0;
+        const messages = ["Yyy...", "Umm...", "Dobra, troszkę głupio wyszło...", "ajjj...", "to... pojawił się ciut duży problem, który na tę chwilę wolę przemilczeć..."];
+        document.getElementById("tricky").addEventListener("click", function () {
+            if (messageIndex < messages.length) {
+                alert(messages[messageIndex]);
+                messageIndex++;
+                if (messageIndex === messages.length) {
+                    //                    document.getElementById("05").disabled = false;
+                    document.getElementById("b").style.display = null;
+                }
+            }
+        });
+
+    </script>
+    <div class="navigation" id="b" style="display: none;">
+            <input type="text" id="password" style="display: none; border-radius: 10px; border: 2px solid pink; padding: 8px; background-color: #2c2c2c; color: white;" placeholder="Hasło <3">
+                <button class="button"
+                onclick="location.href='page3.html'">Dalej...</button>
+    </div>
+
+
+
+
+</body>
+
+</html>

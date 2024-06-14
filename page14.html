@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koniec?</title>
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+        .emoji {
+            position: absolute;
+            top: -5%;
+            font-size: 2em;
+            animation: fall linear infinite, spin linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -5%;
+                opacity: 1;
+            }
+
+            100% {
+                top: 105%;
+                opacity: 0;
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin-reverse {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>❤️‍🔥🎉🎂❤️‍🔥🎉🎂❤️‍🔥🎉🎂</h1>
+
+    <!--A tutaj juz na zakończenie będzie coś o tej świeczce-->
+    To ju&#380; koniec tego dnia, mam nadzieje ze ci się spodobało 😚<br>
+    I &#380;e wszystko wyszło jak miało wyjść (To do mnie z przyszłośći 😅)<br>
+    Nie jest to ostatni dzień, który mam w planach 😏<br>
+    Dlatego jeśli tylko będziesz chciała, to kiedyś to powtórzę 🫶<br>
+    Dla mojej jedynej, najdrozszej księ&#380;niczki, która nale&#380;y tylko do mnie 🥹<br>
+    Dla księ&#380;niczki, o którą muszę dbać najmocniej na świecie tak, jak ona dba o mnie<br>
+    🥹🫶🥹🫶🥹🫶🥹🫶🥹🫶🥹🫶🥹
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const emojis = ["🥹", "🩵", "🐝", "🎂", "🎉", "🎊", "💙", "💜", "💖", "💗", "💓", "💞", "💕", "💘", "💝", "😘", "😚", "🫶", "🥰", "😍", "🤍", "❤️‍🔥"];
+            const emojiCount = 5; // Reduced to a third
+
+            function createEmoji() {
+                const emoji = document.createElement("div");
+                emoji.className = "emoji";
+                emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+                emoji.style.left = Math.random() * 100 - 10 + "vw";
+                emoji.style.animationDuration = Math.random() * 3 + 3 + "s";
+                emoji.style.animationDelay = "0s"; // No initial delay
+                emoji.style.fontSize = Math.random() * 2 + 1 + "em";
+                emoji.style.transform = "rotate(" + Math.random() * 360 + "deg)";
+
+                if (Math.random() > 0.5) {
+                    emoji.style.animationName = "fall, spin";
+                } else {
+                    emoji.style.animationName = "fall, spin-reverse";
+                }
+
+                document.body.appendChild(emoji);
+
+                emoji.addEventListener("animationend", () => {
+                    emoji.remove();
+                });
+            }
+
+            function startEmojiRain() {
+                for (let i = 0; i < emojiCount; i++) {
+                    setTimeout(createEmoji, Math.random() * 3000); // Stagger emoji creation
+                }
+
+                // Continuously create new emojis
+                setInterval(() => {
+                    createEmoji();
+                }, 1000);
+            }
+
+            document.getElementById("startButton").addEventListener("click", () => {
+                startEmojiRain();
+                document.getElementById("startButton").style.display = "none"; // Hide button after clicking
+            });
+        });
+
+    </script>
+
+
+    <div class="navigation">
+        <button class="button" id="startButton" onclick="alert('Napewno nie 🥹')">Koniec...?
+        </button>
+    </div>
+
+</body>
+
+</html>

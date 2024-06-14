@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 5</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+    <h1>Po zabawie</h1>
+
+    <!--A tutaj juz na zakończenie będzie coś o tej świeczce-->
+    Kurka, jednak zgadłaś 😏<br>
+    W takim razie idziemy do kina 😁<br>
+    Kolejne hasło poznasz dopiero w pociągu 😏
+    <script>
+        function checkPassword(message, url) {
+            document.getElementById("password").style.display = null;
+            const input = document.getElementById("password").value.toLowerCase().trimEnd();
+            const correctPassword = "ciuchcia"; // Replace with the actual password
+            if (input === correctPassword) {
+                location.href = url;
+            } else {
+                alert(message);
+            }
+        }
+    </script>
+
+    <div class="navigation">
+        <div class="password-section">
+
+            <button class="button" onclick="alert('😁😁😁😁😁😁😁😁😁😁😁')">😁</button>
+            <button class="button" onclick="alert('😁😁😁😁😁😁😁😁😁😁😁')">😁</button>
+            <button class="button" onclick="alert('😁😁😁😁😁😁😁😁😁😁😁')">😁</button>
+            <button class="button" onclick="alert('😁😁😁😁😁😁😁😁😁😁😁')">😁</button>
+            <button class="button" onclick="alert('😁😁😁😁😁😁😁😁😁😁😁')">😁</button>
+            <div class="navigation">
+                <input type="text" id="password" id="b"
+                    style="display: none; border-radius: 10px; border: 2px solid pink; padding: 8px; background-color: #2c2c2c; color: white;"
+                    placeholder="Wytrzymaj 😏">
+            </div>
+            <div class="navigation">
+                <button class="button" onclick="checkPassword('Teraz kochana film, a później zobaczymy 😏','page12.html')">Dalej 😏
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

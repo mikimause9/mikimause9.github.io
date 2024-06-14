@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 5</title>
+    <title>Kłamstwo</title>
     <link rel="stylesheet" href="styles1.css">
 </head>
 
 <body>
-    <h1>Po zabawie</h1>
+    <h1>Koniec...</h1>
 
     <!--A tutaj juz na zakończenie będzie coś o tej świeczce-->
     To co... jesteśmy najedzeni,<br>
@@ -24,7 +24,7 @@
         function checkPassword(message, url) {
             document.getElementById("password").style.display = null;
             document.getElementById("smile").style.display = "none";
-            document.getElementById("b").innerHTML = "Jak to?!?";
+            document.getElementById("b").innerHTML = "Mów prawdę";
             const input = document.getElementById("password").value.toLowerCase().trimEnd();
             const correctPassword = "kino"; // Replace with the actual password
             if (input === correctPassword) {
@@ -39,7 +39,7 @@
         <div class="password-section">
             <input type="text" id="password"
                 style="display: none; border-radius: 10px; border: 2px solid pink; padding: 8px; background-color: #2c2c2c; color: white;"
-                placeholder="(*Udawany Smutek*)">
+                placeholder="*Udawany Smutek*">
             <button class="button" id="smile" onclick="alert('🙂')">🙂</button>
             <button class="button" id="b"
                 onclick="checkPassword('Dobra, mam nadzieję, ze nie jesteś zła, że plany ciut nie wypaliły... Tak w życiu bywa... 🤪','page11.html')">Czekaj, co?!?!
